@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "projects-remote-state"
+    bucket = "projects-trfm-remote-state"
     key    = "modulo-vpc/terraform.tfstate"
     region = "us-east-1"
   }
