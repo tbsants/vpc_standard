@@ -20,7 +20,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      owner     = "tbsantos"
+      owner     = "tbsantosss"
       ManagedBy = "Terraform"
     }
   }
