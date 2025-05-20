@@ -155,29 +155,3 @@ resource "aws_vpc_endpoint" "ssm-messages" {
     aws_subnet.subnet-priv1.id, aws_subnet.subnet-priv2.id
   ]
 }
-
-resource "aws_security_group" "sg_endpoint" {
-  name        = "prd-endpoint-terraform"
-  description = "security group for vpc endpoints"
-  vpc_id      = aws_vpc.this.id
-
-  ingress {
-    description = "Allow access to 443 port"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = [var.cidr_block]
-  }
-
-  egress {
-    description = ""
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = [var.cidr_block]
-  }
-
-  tags = {
-    Name = "prd-endpoint-terraform"
-  }
-}
