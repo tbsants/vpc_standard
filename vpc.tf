@@ -30,8 +30,9 @@ resource "aws_subnet" "subnet-priv2" {
 }
 
 resource "aws_subnet" "subnet-pub1" {
-  vpc_id     = aws_vpc.this.id
-  cidr_block = "192.168.50.0/24"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "192.168.50.0/24"
+  availability_zone = var.az_1c
 
   tags = {
     Name = "subnet-publica-website"
