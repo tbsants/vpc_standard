@@ -16,6 +16,12 @@ variable "az_1c" {
   default     = "us-east-1c"
 }
 
+variable "az_1d" {
+  type        = string
+  description = ""
+  default     = "us-east-1d"
+}
+
 variable "cidr_block" {
   type        = string
   description = ""

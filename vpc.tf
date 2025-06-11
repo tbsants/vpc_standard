@@ -35,7 +35,17 @@ resource "aws_subnet" "subnet-pub1" {
   availability_zone = var.az_1c
 
   tags = {
-    Name = "subnet-publica-website"
+    Name = "subnet-publica1-website"
+  }
+}
+
+resource "aws_subnet" "subnet-pub2" {
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "192.168.60.0/24"
+  availability_zone = var.az_1d
+
+  tags = {
+    Name = "subnet-publica2-website"
   }
 }
 
