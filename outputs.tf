@@ -13,6 +13,11 @@ output "subnet-pub1" {
   value       = aws_subnet.subnet-pub1.id
 }
 
+output "subnet-pub2" {
+  description = ""
+  value       = aws_subnet.subnet-pub2.id
+}
+
 output "aws_vpc" {
   description = ""
   value       = aws_vpc.this.id
